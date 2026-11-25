@@ -1,25 +1,37 @@
-# 🥷 Ninja Survivors: Co-op Action Survival
+# 🥷 Ninja City
 
-> A cooperative, wave-based horde survival game developed by Team 11 for the CM3030 Games Development module. 
+> A fast-paced, top-down 3D arena survival game built in Unity (C#) for the University of London CM3030 Games Development module.
 
-![Language](https://img.shields.io/badge/Language-C%23-239120) ![Engine](https://img.shields.io/badge/Engine-Unity-black) ![Category](https://img.shields.io/badge/Project-Academic%20%2F%20Team-purple)
+[![Play on itch.io](https://img.shields.io/badge/Play%20on-itch.io-FA5C5C?logo=itch.io&logoColor=white)](https://jeremyf2020.itch.io/ninja-city) ![Language](https://img.shields.io/badge/Language-C%23-239120) ![Engine](https://img.shields.io/badge/Engine-Unity-black) ![Platform](https://img.shields.io/badge/Platform-WebGL-blue) ![Rating](https://img.shields.io/badge/Playtest%20Rating-4.95%2F5-brightgreen)
 
-## 💡 Overview & Team Collaboration
+![Ninja City Gameplay Demo](./demo.gif)
 
-Developed as a joint project for the BSc Computer Science program at the University of London, *Ninja Survivors* is a fast-paced co-op survival game. Building this project required our three-person team to maintain strict version control coordination, manage a shared asset pipeline, and divide complex gameplay mechanics into modular scripts to prevent merge conflicts.
+🕹️ **[Play Ninja City in your browser on itch.io →](https://jeremyf2020.itch.io/ninja-city)**
 
-*(Note on Repository Size: This repository serves as our complete, uncompiled project archive. It intentionally includes all raw game assets, including high-resolution sprites, audio files, animations, and UI elements, to demonstrate our team's end-to-end asset integration and rendering pipeline).*
+## 💡 Overview
 
-## ⚙️ Core Technical Implementation
+*Ninja City* is a 5-minute, pick-up-and-play single-player survival game set in a stylized low-poly Japanese city. Players battle escalating enemy waves across two difficulty modes (**Easy / Tutorial** and **Normal**), level up to unlock randomized skill upgrades, and endure a final **5-Boss Gauntlet**.
 
-### 1. Cooperative Systems & State Management
-*   **Shared Game State:** Synchronized multiple player states, hitboxes, and independent health systems to support seamless co-op mechanics without input lag.
-*   **Collision & Physics:** Utilized rigid-body physics and custom collision matrices to ensure accurate weapon strikes and enemy pathfinding across all active player instances.
+## 🎮 Gameplay & Controls
 
-### 2. Horde Mechanics & Optimization
-*   **Dynamic Spawning:** Engineered a wave-based spawning algorithm that scales enemy count and difficulty linearly over time.
-*   **Object Pooling:** To prevent memory leaks and frame-rate drops when rendering hundreds of enemies and projectiles simultaneously, memory allocation is handled via strict Object Pooling rather than continuous instantiation and destruction.
+| Input | Action | Details |
+| :--- | :--- | :--- |
+| **`W` `A` `S` `D`** | Move | Responsive script-driven movement |
+| **Left / Right Click** | Melee / Ranged | Katana slash & Shuriken throw aimed via mouse raycast |
+| **`Space`** | Stealth | Drops enemy aggro (enemies switch to idle; contact still deals damage) |
+| **`1`** | Fireball | High-damage ranged burst (scales projectile count per level) |
+| **`2`** | Tornado | Channeled AoE summon with ground rune indicator |
+| **`3`** | Heal | Restores HP to recover from high-pressure waves |
 
-### 3. Asset & UI Pipeline
-*   Integrated raw textures, animations, and audio clips into a cohesive user interface, managing the bridge between backend C# logic and frontend canvas updates (health bars, timers, score tracking) for multiple players.
+- **🔥 Hidden Elemental Combo:** Launching a **Fireball** into an active **Tornado** triggers a high-damage **Fire Tornado**.
+- **👹 Final Boss Gauntlet (4:00 – 5:00):** Five oversized bosses spawn every 10 seconds with telegraphed **Roll** and **Fire Ring Spin** attacks, paired with dynamic boss BGM.
 
+## ⚙️ Technical Highlights
+
+- **Modular C# Architecture:** Refactored core systems around abstract base classes (`Status`, `ISkill`) to centralize health, cooldowns, and damage handling across multiple enemy tiers and boss states.
+- **WebGL Performance Optimization:** Pivoted from heavy high-detail models to stylized low-poly 3D assets and standardized on a `4:3` aspect ratio for smooth browser performance and visual focus.
+- **Playtest-Driven UX:** Iterated across three rounds of user surveys (final average rating: **4.95/5**; **95.2%** high learnability), introducing an auto-hiding tutorial guide, easing HP/EXP bars, and randomized skill level-ups to keep combat uninterrupted.
+
+## 👥 Credits
+
+Developed by **Team 11** (Ka Ming Fan, Vsevolod Zakharov, Josef Alkhuzanie) — BSc Computer Science, University of London.
