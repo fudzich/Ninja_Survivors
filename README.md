@@ -4,7 +4,7 @@
 
 [![Play on itch.io](https://img.shields.io/badge/Play%20on-itch.io-FA5C5C?logo=itch.io&logoColor=white)](https://jeremyf2020.itch.io/ninja-city) ![Language](https://img.shields.io/badge/Language-C%23-239120) ![Engine](https://img.shields.io/badge/Engine-Unity-black) ![Platform](https://img.shields.io/badge/Platform-WebGL-blue) ![Rating](https://img.shields.io/badge/Playtest%20Rating-4.95%2F5-brightgreen)
 
-![Ninja City Gameplay Demo](./demo.gif)
+![Ninja City Gameplay Demo](./demo_ninja_survivors.gif)
 
 🕹️ **[Play Ninja City in your browser on itch.io →](https://jeremyf2020.itch.io/ninja-city)**
 
